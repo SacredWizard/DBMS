@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="shortcut icon" href="rvce.ico">
+<title>Feedback Data</title>
+</head>
+<body background="rvtrans.jpg">
+<?php
+$conn=mysql_connect("localhost","root","");
+if(!$conn)
+echo "Connection Error!!!";
+$res=mysql_select_db("it_infra");
+?>
+
+
+<center> <h2 style="color:blue; text-decoration:underline;"> FEEDBACK DATA</h2>
+
+<center>
+<table width="90%"  style="border:2px solid #8AB8E6; ">
+<tr style="background-color:#5CADFF">
+	<th>Feedback_ID</th>
+	<th>Q1</th>
+	<th>Q2</th>
+	<th>Q3</th>
+	<th>Q4</th>
+	<th>Q5</th>
+	<th>Q6</th>
+	<th>Q7</th>
+	<th>Q8</th>
+	<th>Q9</th>
+	<th>Q10</th>
+
+
+	</tr>
+<?php
+$qry="select * from feedback;";
+$val=mysql_query($qry);
+
+while($row = mysql_fetch_array($val))
+  {
+  echo "<tr style='background:white;'>";
+  echo "<td>" . $row['Feedback_ID'] . "</td>";
+    echo "<td>" . $row['Q1'] . "</td>";
+  echo "<td>" . $row['Q2'] . "</td>";
+   echo "<td>" . $row['Q3'] . "</td>";
+  echo "<td>" . $row['Q4'] . "</td>";
+   echo "<td>" . $row['Q5'] . "</td>";
+      echo "<td>" . $row['Q6'] . "</td>";
+ echo "<td>" . $row['Q7'] . "</td>";
+   echo "<td>" . $row['Q8'] . "</td>";
+      echo "<td>" . $row['Q9'] . "</td>";
+  echo "<td>" . $row['Q10'] . "</td>";
+   echo "</tr>";
+  }
+  ?>
+</table>
+</center><br><br>
+<center><a href="admin1.php">Back</a></center>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="shortcut icon" href="rvce.ico">
+<title>Faculty Details</title>
+</head>
+<body background="rvtrans.jpg">
+<?php
+$conn=mysql_connect("localhost","root","");
+if(!$conn)
+echo "Connection Error!!!";
+$res=mysql_select_db("itifs");
+?>
+
+
+<center> <h2 style="color:blue; text-decoration:underline;"> FACULTY DETAILS</h2>
+
+<center>
+<table width="50%"  style="border:2px solid #8AB8E6; ">
+<tr style="background-color:#5CADFF">
+	<th>Staff_ID</th>
+	<th>Name</th>
+	<th>DOB</th>
+	<th>AGE</th>
+	<th>Designation</th>
+	<th>Depart_name</th>
+</tr>
+<?php
+$qry="select * from faculty;";
+$val=mysql_query($qry);
+
+while($row = mysql_fetch_array($val))
+  {
+  echo "<tr style='background:white;'>";
+  echo "<td>" . $row['Staff_ID'] . "</td>";
+    echo "<td>" . $row['Name'] . "</td>";
+  echo "<td>" . $row['DOB'] . "</td>";
+   echo "<td>" . $row['Age'] . "</td>";
+  echo "<td>" . $row['Designation'] . "</td>";
+   echo "<td>" . $row['Depart_name'] . "</td>";
+  echo "</tr>";
+  }
+  ?>
+</table>
+</center>
+</center><br><br>
+<center><a href="admin1.php">Back</a></center>
+</body>
+</html>

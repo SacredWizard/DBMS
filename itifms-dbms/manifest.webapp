@@ -1,0 +1,13 @@
+{
+  "name": "My DBMS App",
+  "description": "IT Infrastructure Feed back Management system",
+  "launch_path": "/dbms",
+  "icons": {
+    "128": "/rvce.ico"
+  },
+  "developer": {
+    "name": "RAKESH",
+    "url": "http://www.novoid.com"
+  },
+  "default_locale": "en"
+}

@@ -1,0 +1,69 @@
+html,body
+{
+	height:100%
+	
+}
+
+body
+ {
+ 	background:#181818;
+ 	padding-bottom: 0px;
+ 	margin:0px;
+ 	font-family: 'Didact Gothic',sans-serif;
+ 	font-size:12pt;
+ 	font-weight: 200;
+ 	color: #FFF;
+ 	text-decoration: none;
+ 
+ }
+ #header-wrapper
+	{
+		position: relative;
+		padding: 5em 0em 7em 0em;
+		background: #111111 url(header-bg.png) no-repeat center;
+		background-size: cover;
+	}
+
+a.r
+{
+	display:inline-block;
+	padding:0.5em 0.5em 0.5em 0.5em;
+	letter-spacing: 0.10em;
+	background: #2651A8;
+	
+	text-decoration:none;
+	text:color:#000
+	font-weight:700;
+	font-size:1em;
+	color:#FFF;
+}
+
+#header 
+{
+	position: relative;
+	padding: 0em 0em;
+}
+#banner
+{
+	padding-top: 0em;
+	text-align: center;
+}
+#banner .title h2
+{
+	font-size: 4em;
+}
+#banner .title .byline
+{
+	font-size: 2em;
+}
+
+input.button
+{
+
+   	padding: 0.5em 1em;
+   	border-radius: 6px;
+   	background: #2651a8;
+	border-color: rgba(0,0,0,.8);
+	color: #FFF;
+	display: inline-block;
+}
